@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="flex flex-row">
+        <h1>Body mass Index (BMI)</h1>
+        <p>A measure of body fat in adults</p>
+    </nav>
+    <div class="container" style="position:relative;">
+        <form class="mini-container flex-row">
+
+            <label for="weight">Weight</label><br>
+            <div style="margin: 5px;">
+                <input id='weight' onchange=BMI_calculate() class="center" type="number" name="weight" id="">  kg
+            </div>
+            
+            <label for="height">Height</label><br>
+            <div>
+                <input id="height" onchange=BMI_calculate() class="center" type="number" name="height" id="">  cm
+            </div>
+    
+        </form>
+        <div class="mini-container flex-row" style="right: 0; align-items: flex-end;width: 35%;">
+            <h1 id="resultBMI" style="font-size: 50px;">0</h1><br>
+            <h2 id="BMI_value" >Overweight BMI</h2>
+        </div>
+    </div>
+    
+    
+</body>
+<script>
+    function BMI_calculate(params) {
+        let height= document.getElementById('height').value;
+        let weight= document.getElementById('weight').value;
+        height=height/100
+        let BMI= weight/(height*height)
+        let result=0
+            if(BMI<18){
+            result='Underweight'
+            }else if(BMI <25){
+                result='Normal'
+            }
+            else if(BMI <=30){
+                result='Overweight'
+            }
+            else if(BMI >30){
+                result='Obese'
+            }
+        
+
+        document.getElementById('resultBMI').innerHTML =result
+        document.getElementById('BMI_value').innerHTML =BMI
+
+    }
+</script>
+</html>>

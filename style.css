@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+nav{
+    width: 100vw;
+    height: 10vh;
+    background: rgb(0, 174, 255);
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 0 2rem;
+
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 ;
+    position: relative;
+}
+.mini-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.flex{
+    display: flex;
+}
+.flex-row{
+    flex-direction: column;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.text-center{
+    text-align: center;
+}
+form{
+    height: 10rem;
+    border: 1px solid gray;
+}
+input{
+    border: 1px gray solid;
+    background: rgb(255, 252, 252);
+    width: 80%;
+    height: 2rem;
+}
+
+#resultBMI{
+    color: aqua;
+}
